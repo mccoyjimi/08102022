@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.banner {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+
+  --bg1: url("./assets/images/sunset.jpg");
+  --bg2: url("./assets/images/slide2.jpg");
+  --bg3: url("./assets/images/slide3.jpg");
+  /*--bg4: url("https://images.unsplash.com/photo-1490462686240-04979237c723?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80");
+  --bg5: url("https://images.unsplash.com/photo-1571147558584-8490ea37d7a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80");*/
+
+  --current-bg: var(--bg1);
+  background-image: var(--current-bg);
+  animation: changeImage 50s linear infinite;
+}
+
+/* Animate using css custom properties */
+@keyframes changeImage {
+  0% {
+    --current-bg: var(--bg1);
+  }
+  20% {
+    --current-bg: var(--bg2);
+  }
+  40% {
+    --current-bg: var(--bg3);
+  }
+  60% {
+    --current-bg: var(--bg1);
+  }
+  80% {
+    --current-bg: var(--bg2);
+  }
+  100% {
+    --current-bg: var(--bg3);
+  }
+}
+.slider_overlay {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+  position: absolute;
+  top: 0;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+.logo {
+  flex-basis: 15%;
+}
+.logo img {
+  width: 200px;
+  cursor: pointer;
+  margin-left: 30px;
+}
+.menu-icon {
+  flex: 1;
+  align-items: center;
+  text-align: right;
+  margin-right: 30px;
+}
+.menu-icon i {
+  width: 20px;
+  margin-left: 40px;
+  cursor: pointer;
+  color: white;
+  transition: 0.7s;
+}
+.menu-icon i:hover {
+  color: #35bda3;
+}
+.content {
+  width: 60%;
+  margin: 160px auto 0;
+  text-align: center;
+  color: white;
+}
+.content h1 {
+  font-size: 60px;
+}
+.content h3 {
+  width: 80%;
+  margin: 20px auto 100px;
+  font-weight: 100;
+  line-height: 25px;
+}
+button {
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid #35bda3;
+  background: #1b6dc1;
+  color: white;
+  cursor: pointer;
+  transition: background 0.7s;
+}
+button:hover {
+  background: transparent;
+  border: 2px solid #35bda3;
+}
+
+/*PRODUCTS*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 9px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 15px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+
+.w3-cell-row {
+  width: 100%;
+  padding: 78px 120px;
+  background: rgb(252, 252, 255);
+}
